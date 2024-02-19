@@ -9,12 +9,13 @@ function copyCouponCode(code) {
 }
 
 
-const availableSeats = document.querySelectorAll('.available-seat');
-const selectedSeats = document.getElementById('selected-seats');
+document.addEventListener('DOMContentLoaded', function() {
+    const buyTicketsBtn = document.getElementById('buyTicketsBtn');
+    const selectSeatSection = document.getElementById('selectSeatSection');
 
-availableSeats.forEach(seat => {
-  seat.addEventListener('click', () => {
-    seat.classList.toggle('selected');
-    updateSelectedSeatsList(); 
-  });
+    if (buyTicketsBtn && selectSeatSection) {
+        buyTicketsBtn.addEventListener('click', function() {
+            selectSeatSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 });

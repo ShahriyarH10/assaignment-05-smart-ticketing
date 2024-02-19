@@ -49,7 +49,7 @@
                 <h1 class="text-6xl text-white">End-to-End Travel with</h1>
                 <h1 class="text-6xl text-green-500">PH Paribahan</h1>
                 <p class="my-8">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="px-8 py-3 bg-green-500 border-green-500 border text-sm text-black-500 rounded-lg font-medium inline">Buy Tickets</button>
+                <button id="buyTicketsBtn" class="px-8 py-3 bg-green-500 border-green-500 border text-sm text-black-500 rounded-lg font-medium inline">Buy Tickets</button>
             </div>
         </section>
     </header>
@@ -150,7 +150,7 @@
                 </div>
 
                 <!-- Select seat section -->
-                <div class="flex justify-evenly my-10">
+                <div id="selectSeatSection" class="flex justify-evenly my-10">
                     <div>
                         <h3 class="font-bold">Select your Seat</h3>
                         <div class="flex justify-between">
@@ -234,36 +234,23 @@
                     <div>
                         <h3 class="font-bold">Select your Seat</h3>
                         <div class="bg-[#0307121A] rounded-lg p-5">
-                            <div class="flex justify-between gap-10 font-bold">
-                                <p>Seat</p>
-                                <p>Class</p>
-                                <p>Price</p>
+                            
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between font-bold px-8 py-3 bg-white rounded-lg">
+                                    <p>Total Cost:</p>
+                                    <p><span id="total-cost">0</span></p>
+                                </div>
+                                <div class="join">
+                                    <input id="coupon-input" class="input input-bordered join-item" placeholder="Have any copupon?"/>
+                                    <button id="apply-coupon" class="btn join-item rounded-lg px-8 py-3 bg-green-500 border-green-500 border text-sm text-black-500 font-medium inline">Apply</button>
+                                </div>
                             </div>
-                            <div class="flex justify-between">
-                                <p>C2</p>
-                                <p>Economoy</p>
-                                <p>550</p>
-                            </div>
-                            <div class="flex justify-between">
-                                <p>C2</p>
-                                <p>Economoy</p>
-                                <p>550</p>
-                            </div>
-                            <div class="flex justify-between font-bold">
-                                <p>Total Cost:</p>
-                                <p><span id="total-cost">0</span></p>
-                            </div>
-                            <div class="join">
-                                <input id="coupon-input" class="input input-bordered join-item" placeholder="Have any copupon?"/>
-                                <button id="apply-coupon" class="btn join-item rounded-lg px-8 py-3 bg-green-500 border-green-500 border text-sm text-black-500 font-medium inline">Apply</button>
-                            </div>
-                            <div class="flex justify-between font-bold">
-                                <p>Grand Total</p>
-                                <p>1100</p>
-                            </div>
+                            <br>
+
+                            <h1 class="font-bold">Fill your Personal Details</h1>
                             <form action="" class="flex flex-col gap-3">
                                 <label class="input input-bordered flex items-center gap-2">
-                                    <input type="text" class="grow" placeholder="Enter your name" />
+                                    <input type="text" class="grow" placeholder="Enter your phone name" />
                                 </label>
                                 <label class="input input-bordered flex items-center gap-2">
                                     <input type="text" class="grow" placeholder="Enter your phone number" />
@@ -271,7 +258,8 @@
                                 <label class="input input-bordered flex items-center gap-2">
                                     <input type="text" class="grow" placeholder="Enter your email id" />
                                 </label>
-                                <button class="btn join-item rounded-lg px-8 py-3 bg-green-500 border-green-500 border text-sm text-black-500 font-medium inline"><link rel="stylesheet" href="sucssec.html">Next</button>
+                                <a href="sucssec.html" class="btn join-item rounded-lg px-8 py-3 bg-green-500 border-green-500 border text-sm text-black-500 font-medium inline">Next</a>
+
                             </form>
                            
                         </div>
